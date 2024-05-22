@@ -1,5 +1,5 @@
     {
-        "name": "fr.wseduc~stats~1.12-SNAPSHOT",
+        "name": "fr.wseduc~stats~2.0-b2school-SNAPSHOT",
         "config": {
             "main" : "fr.wseduc.stats.Stats",
             "port" : 8225,
