@@ -49,6 +49,7 @@ import fr.wseduc.stats.cron.CronAggregationTask;
 import fr.wseduc.stats.filters.WorkflowFilter;
 import fr.wseduc.stats.services.DefaultJobsServiceImpl;
 import fr.wseduc.stats.services.JobsService;
+import fr.wseduc.stats.services.MockStatsService;
 import fr.wseduc.stats.services.PGStatsService;
 import fr.wseduc.stats.services.StatsService;
 import fr.wseduc.stats.services.StatsServiceMongoImpl;
@@ -125,7 +126,9 @@ public class Stats extends BaseServer {
 			jobsController.setJobsService(jobsService);
 			addController(jobsController);
 		}
-		if (readPGConfig != null && !readPGConfig.isEmpty() && !oldStats) {
+		if (Boolean.TRUE.equals(config.getBoolean("mock", false))) {
+			statsService = new MockStatsService(vertx, config.getString("mocks-path"));
+		} else if (readPGConfig != null && !readPGConfig.isEmpty() && !oldStats) {
 			final PgConnectOptions connectOptions = new PgConnectOptions().setPort(readPGConfig.getInteger("port", 5432))
 					.setHost(readPGConfig.getString("host")).setDatabase(readPGConfig.getString("database"))
 					.setUser(readPGConfig.getString("user")).setPassword(readPGConfig.getString("password"));
