@@ -1,6 +1,6 @@
 {
   "name": "pages",
-  "version": "2.1.0-dev.0",
+  "version": "2.1-SNAPSHOTdev.1",
   "description": "This application allows users to create websites.",
   "main": "gulpfile.js",
   "dependencies": {
