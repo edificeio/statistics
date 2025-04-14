@@ -36,7 +36,7 @@
         <joda-time.version>2.9.4</joda-time.version>
         <postgres-driver.version>42.2.26</postgres-driver.version>
         <hikari.version>2.4.2</hikari.version>
-        <mod-postgresql.version>2.0-SNAPSHOT</mod-postgresql.version>
+        <mod-postgresql.version>2.0-develop-b2school-SNAPSHOT</mod-postgresql.version>
         <stats-repository.version>1.9.0</stats-repository.version>
     </properties>
 
