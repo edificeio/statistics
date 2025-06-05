@@ -5,7 +5,7 @@
     "modules" : ["ShareBigFiles","ClassParam","Calendar","Pages","Scrapbook","CollaborativeWall","Poll","Actualites","Annuaire","Homeworks","Conversation",
         "MyAccount","SchoolBook","Rbs","Website","Exercizer","Archive","Support","Community","TimelineGenerator","Workspace","Mindmap","Blog","Forum","Zimbra",
         "Admin","Mediacentre","Wiki","WebConference","CollaborativeEditor","Presences","Stats","Rack",
-        "AideAuDevoirs","Alise","artips","Balado","BiblioCollege","Brne","Capytale","CerisePrim","CerisePro","Cesame","Chamilo",
+        "AideAuDevoirs","Alise","Appointments","artips","Balado","BiblioCollege","Brne","Capytale","CerisePrim","CerisePro","Cesame","Chamilo",
         "CIDJ","CNS","corelycee","DeltaExpert","Educagri","Educ-Arte","Edulib","Edulib2","Edulib-Belin","Edulib-Magnard","EduMalin","EduMaxicours","EduMedia",
         "edumoov","Elea","Eliot","ElyceeHDF","English-Attack","Esidoc","EulerRessources","EulerRessources-pp","ExplorateurDeMetiers","FoliosOnisep",
         "Formulaire","Formulaire-public","Diary","Edt","Competences","Viescolaire","Geogebra","GRR", "Jupyter",
