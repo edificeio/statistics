@@ -361,4 +361,25 @@ public class StatsController extends MongoDbControllerHelper {
 		this.eventHelper = eventHelper;
 	}
 
+	@Get("/structure/metrics")
+	@SecuredAction(value = "", type = ActionType.RESOURCE)
+	@ResourceFilter(StatsResourceProvider.class)
+	public void getStructureMetrics(final HttpServerRequest request) {
+
+		final String structureId = request.params().get("structureId");
+		if(structureId == null || structureId.trim().isEmpty()) {
+			badRequest(request, "structure.id.missing");
+			return;
+		}
+
+		structureService.getStructureMetrics(structureId, either -> {
+			if (either.isLeft()) {
+				log.error(either.left().getValue());
+				renderError(request);
+			} else {
+				renderJson(request, either.right().getValue());
+			}
+		});
+	}
+
 }
