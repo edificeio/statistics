@@ -1,3 +1,10 @@
+# À propos de l'application stats
+    
+* Licence : [AGPL v3](http://www.gnu.org/licenses/agpl.txt) - Copyright Edifice
+* Financeur(s) : Edifice
+* Développeur(s) : Edifice
+* Description : module d'affichage de statistiques.
+
 # Notes d'utilisation
 
 ## Construction
