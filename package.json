@@ -37,6 +37,6 @@
   "homepage": "https://github.com/web-education/pages",
   "packageManager": "yarn@1.22.19",
   "engines": {
-    "node": "16 || 18"
+    "node": "18 || 20"
   }
 }
