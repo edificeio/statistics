@@ -64,8 +64,6 @@ interface StatsControllerScope {
 	export(): void;
 	exportFromLightbox(): void;
 	closeOnboarding(): void;
-	isAdml(): boolean;
-	isTopLevelStructure(): boolean; 
 	$apply: any;
 }
 
@@ -476,13 +474,5 @@ export const statsController = ng.controller('StatsController', ['$scope', '$tim
 	$scope.closeOnboarding = () => {
 		$scope.display.lightbox.onboarding = false;
 		cancelOnboarding();
-	}
-
-	$scope.isAdml = (): boolean => {
-		return UserService.getInstance().isAdml(model.me.functions);
-	}
-
-	$scope.isTopLevelStructure = (): boolean => {
-		return entitiesService.isTopLevelStructure($scope.state.currentEntity);
 	}
 }]);
