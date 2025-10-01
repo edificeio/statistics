@@ -96,7 +96,7 @@
   "stats.none": "Aucune",
   "stats.onboarding.adml.bottomlevelstructure": "...",
   "stats.onboarding.adml.toplevelstructure": "...",
-  "stats.onboarding.content": "Nous avons identifié un problème dans le module Statistiques. Les données du 9 au 24 septembre 2025 sont erronées. Nous vous invitons donc à ne pas en tenir compte pour vos analyses. Nos équipes travaillent activement à corriger la situation. Nous nous excusons pour la gêne occasionnée et vous remercions de votre compréhension.",
+  "stats.onboarding.content": "<p>Nous avons identifié un problème dans le module Statistiques.</p><p>Les données du <b>9 au 24 septembre</b> 2025 sont erronées. Nous vous invitons donc à ne pas en tenir compte pour vos analyses.</p><p>Nos équipes travaillent activement à corriger la situation. Nous nous excusons pour la gêne occasionnée et vous remercions de votre compréhension.</p>",
   "stats.onboarding.title": "Problème temporaire dans les statistiques",
   "stats.others": "Autres",
   "stats.personnel": "Personnels",
