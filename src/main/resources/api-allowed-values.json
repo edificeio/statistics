@@ -3,7 +3,7 @@
     "entities-levels" : ["platform","structure", "class", "tenant"],
     "frequencies" : ["hour", "day", "week", "month"],
     "modules" : ["ShareBigFiles","ClassParam","Calendar","Pages","Scrapbook","CollaborativeWall","Poll","Actualites","Annuaire","Homeworks","Conversation",
-        "MyAccount","SchoolBook","Rbs","Website","Exercizer","Archive","Support","Community","TimelineGenerator","Workspace","Mindmap","Blog","Forum","Zimbra",
+        "MyAccount","SchoolBook","Rbs","Website","Exercizer","Archive","Support","Communities","Community","TimelineGenerator","Workspace","Mindmap","Blog","Forum","Zimbra",
         "Admin","Mediacentre","Wiki","WebConference","CollaborativeEditor","Presences","Stats","Rack",
         "AideAuDevoirs","Alise","Appointments","artips","Balado","BiblioCollege","Brne","Capytale","CerisePrim","CerisePro","Cesame","Chamilo",
         "CIDJ","CNS","corelycee","DeltaExpert","Educagri","Educ-Arte","Edulib","Edulib2","Edulib-Belin","Edulib-Magnard","EduMalin","EduMaxicours","EduMedia",
