@@ -230,7 +230,8 @@ export const statsController = ng.controller('StatsController', ['$scope', '$tim
 			}
 		}
 
-		await initOnboarding();
+		// TODO: uncomment this if we need onboarding modal with specific content
+		// await initOnboarding(); 
 		
 		// Spinner off
 		setTimeout(() => {
