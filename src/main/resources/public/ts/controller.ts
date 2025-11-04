@@ -204,17 +204,15 @@ export const statsController = ng.controller('StatsController', ['$scope', '$tim
 		}
 	};
 
-
-	// TO reactivate this if we need onboarding modal, you can check https://edifice-community.atlassian.net/browse/COCO-4718
-	// const initOnboarding = async () => {
-	// 	let onboardingUserPrefs: {preference: any} = await UserService.getInstance().getUserPrefs(UserService.USER_PREF_ONBOARDING);
-	// 	if (onboardingUserPrefs && onboardingUserPrefs.preference === null) {
-	// 		$scope.display.lightbox.onboarding = true;
-	// 	} else {
-	// 		$scope.display.lightbox.onboarding = false;
-	// 	}
-	// 	safeScopeApply();
-	// };
+	const initOnboarding = async () => {
+		let onboardingUserPrefs: {preference: any} = await UserService.getInstance().getUserPrefs(UserService.USER_PREF_ONBOARDING);
+		if (onboardingUserPrefs && onboardingUserPrefs.preference === null) {
+			$scope.display.lightbox.onboarding = true;
+		} else {
+			$scope.display.lightbox.onboarding = false;
+		}
+		safeScopeApply();
+	};
 	
 	/**** INIT Data ****/
 	let initData = async () => {
@@ -232,8 +230,7 @@ export const statsController = ng.controller('StatsController', ['$scope', '$tim
 			}
 		}
 
-		// TODO: uncomment this if we need onboarding modal with specific content
-		// await initOnboarding(); 
+		await initOnboarding();
 		
 		// Spinner off
 		setTimeout(() => {
