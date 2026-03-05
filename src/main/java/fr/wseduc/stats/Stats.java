@@ -26,6 +26,7 @@ import java.text.ParseException;
 import java.util.Base64;
 import java.util.Map;
 
+import fr.wseduc.stats.controllers.TaskController;
 import fr.wseduc.webutils.collections.SharedDataHelper;
 import io.vertx.core.Future;
 import io.vertx.core.Promise;
@@ -79,10 +80,13 @@ public class Stats extends BaseServer {
 		final String aggregationCron = config.getString("aggregation-cron");
 		// Day delta, default : processes yesterday events
 		int dayDelta = config.getInteger("dayDelta", -1);
-
+		final CronAggregationTask cronAggregationTask = new CronAggregationTask(dayDelta);
+		// Enable aggregation task to be triggered via API
+		addController(new TaskController(cronAggregationTask));
+		// Schedule aggregation task from cron expression
 		if (aggregationCron != null && !aggregationCron.trim().isEmpty()) {
 			try {
-				new CronTrigger(vertx, aggregationCron).schedule(new CronAggregationTask(dayDelta));
+				new CronTrigger(vertx, aggregationCron).schedule(cronAggregationTask);
 			} catch (ParseException e) {
 				logger.fatal(e.getMessage(), e);
 				vertx.close();
