@@ -1,6 +1,8 @@
 package fr.wseduc.stats.controllers;
 
 import fr.wseduc.rs.Post;
+import fr.wseduc.security.ActionType;
+import fr.wseduc.security.SecuredAction;
 import fr.wseduc.stats.cron.CronAggregationTask;
 import fr.wseduc.webutils.http.BaseController;
 import io.vertx.core.http.HttpServerRequest;
@@ -17,6 +19,7 @@ public class TaskController extends BaseController {
 	}
 
 	@Post("api/internal/aggregate")
+	@SecuredAction(value = "", type = ActionType.RESOURCE)
 	public void aggregate(HttpServerRequest request) {
 		log.info("Triggered aggregation task");
 		cronAggregationTask.handle(0L);
