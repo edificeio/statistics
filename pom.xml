@@ -4,94 +4,121 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>io.edifice</groupId>
-        <artifactId>app-parent</artifactId>
-        <version>1.2.0</version>
-    </parent>
-
-    <groupId>fr.wseduc</groupId>
-    <artifactId>stats</artifactId>
-    <version>2.5-SNAPSHOT</version>
-
-    <scm><!-- Adapter avec l'url du repertoire (github, gitlab...) -->
-        <connection>scm:git:https://github.com/edificeio/statistics.git</connection>
-        <developerConnection>scm:git:https://github.com/edificeio/statistics.git</developerConnection>
-        <url>https://github.com/edificeio/statistics</url>
-    </scm>
-
-    <repositories>
-        <repository>
-            <id>ode</id>
-            <name>ODE Repository</name>
-            <url>https://maven.opendigitaleducation.com/nexus/content/groups/public</url>
-        </repository>
-    </repositories>
-
-    <properties>
+  <parent>
+    <groupId>io.edifice</groupId>
+    <artifactId>app-parent</artifactId>
+    <version>1.2.1</version>
+  </parent>
+  <groupId>fr.wseduc</groupId>
+  <artifactId>stats</artifactId>
+  <version>2.5-separation-SNAPSHOT</version>
+  <scm>
+    <!-- Adapter avec l'url du repertoire (github, gitlab...) -->
+    <connection>scm:git:https://github.com/edificeio/statistics.git</connection>
+    <developerConnection>scm:git:https://github.com/edificeio/statistics.git</developerConnection>
+    <url>https://github.com/edificeio/statistics</url>
+  </scm>
+  <repositories>
+    <repository>
+      <id>ode</id>
+      <name>ODE Repository</name>
+      <url>https://maven.opendigitaleducation.com/nexus/content/groups/public</url>
+    </repository>
+  </repositories>
+  <properties>
         <entcore.version>6.14-SNAPSHOT</entcore.version>
-        <vertx-cron-timer.version>3.0-SNAPSHOT</vertx-cron-timer.version>
-        <joda-time.version>2.9.4</joda-time.version>
-        <postgres-driver.version>42.2.26</postgres-driver.version>
-        <hikari.version>2.4.2</hikari.version>
-        <mod-postgresql.version>2.1-SNAPSHOT</mod-postgresql.version>
-        <stats-repository.version>1.9.0</stats-repository.version>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-core</artifactId>
-            <version>${vertxVersion}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-pg-client</artifactId>
-            <version>${vertxVersion}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-            <version>${joda-time.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>fr.wseduc</groupId>
-            <artifactId>vertx-cron-timer</artifactId>
-            <version>${vertx-cron-timer.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jacksonDatabindVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.entcore</groupId>
-            <artifactId>common</artifactId>
-            <version>${entcore.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.entcore</groupId>
-            <artifactId>tests</artifactId>
-            <version>${entcore.version}</version>
-            <scope>tests</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.opendigitaleducation</groupId>
-            <artifactId>stats</artifactId>
-            <scope>compile</scope>
-            <version>${stats-repository.version}</version>
-        </dependency>
+    <vertx-cron-timer.version>3.0-SNAPSHOT</vertx-cron-timer.version>
+    <joda-time.version>2.9.4</joda-time.version>
+    <postgres-driver.version>42.2.26</postgres-driver.version>
+    <hikari.version>2.4.2</hikari.version>
+    <mod-postgresql.version>2.1-SNAPSHOT</mod-postgresql.version>
+    <stats-repository.version>1.9.0</stats-repository.version>
+    <modMongoVersion>4.1-separation-SNAPSHOT</modMongoVersion>
+    <modJsonSchemaValidatorVersion>2.1-SNAPSHOT</modJsonSchemaValidatorVersion>
+    <entCoreLibsVersion>6.14-separation-SNAPSHOT</entCoreLibsVersion>
+    <entCoreVersion>6.14-separation-SNAPSHOT</entCoreVersion>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-core</artifactId>
+      <version>${vertxVersion}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-pg-client</artifactId>
+      <version>${vertxVersion}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>${joda-time.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>fr.wseduc</groupId>
+      <artifactId>vertx-cron-timer</artifactId>
+      <version>${vertx-cron-timer.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jacksonDatabindVersion}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.entcore</groupId>
+      <artifactId>common</artifactId>
+      <version>${entcore.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.entcore</groupId>
+      <artifactId>tests</artifactId>
+      <version>${entcore.version}</version>
+      <scope>tests</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.opendigitaleducation</groupId>
+      <artifactId>stats</artifactId>
+      <scope>compile</scope>
+      <version>${stats-repository.version}</version>
+    </dependency>
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
       <version>${postgres-driver.version}</version>
       <scope>compile</scope>
     </dependency>
-    </dependencies>
+    <dependency>
+      <groupId>org.entcore</groupId>
+      <artifactId>common</artifactId>
+      <version>${entCoreLibsVersion}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>mod-mongo-persistor</artifactId>
+      <version>${modMongoVersion}</version>
+      <scope>runtime</scope>
+      <classifier>fat</classifier>
+    </dependency>
+    <dependency>
+      <groupId>org.entcore</groupId>
+      <artifactId>session</artifactId>
+      <version>${entCoreLibsVersion}</version>
+      <scope>runtime</scope>
+      <classifier>fat</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.opendigitaleducation</groupId>
+      <artifactId>mod-json-schema-validator</artifactId>
+      <version>${modJsonSchemaValidatorVersion}</version>
+      <scope>runtime</scope>
+      <classifier>fat</classifier>
+    </dependency>
+  </dependencies>
 </project>

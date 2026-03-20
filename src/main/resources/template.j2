@@ -2,6 +2,10 @@
  "name": "fr.wseduc~stats",
   "config": {
     "main" : "fr.wseduc.stats.Stats",
+    "probes": [
+      "org.entcore.common.http.health.Neo4jProbe",
+      "org.entcore.common.http.health.MongoProbe"
+    ],
     "port" : 8225,
     "app-name" : "Statistiques",
     "app-address" : "/stats",
