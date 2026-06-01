@@ -19,7 +19,7 @@ pipeline {
       }
       stage('Build image') {
         steps {
-          sh 'edifice image --archs=linux/amd64 --force'
+          sh './edifice image --archs=linux/amd64'
         }
       }
     }
