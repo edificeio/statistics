@@ -1,6 +1,6 @@
 {
   "name": "pages",
-  "version": "2.6.4-dev.0",
+  "version": "2.6.0-develop-b2school.0",
   "description": "This application allows users to create websites.",
   "main": "gulpfile.js",
   "dependencies": {
